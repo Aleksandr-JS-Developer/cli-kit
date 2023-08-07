@@ -2,6 +2,7 @@ import length from './utils/length.js';
 import hex from './utils/hexToRadix.js';
 import random from './utils/random.js';
 import crypto from './utils/crypto.js';
+import sum from './utils/sum.js';
 
 const main = () => {
   if (document.readyState === 'loading') {
@@ -20,6 +21,8 @@ const main = () => {
       r: random,
       crypto: crypto,
       c: crypto,
+      sum,
+      s: sum,
     },
     {
       fillParent: true,
