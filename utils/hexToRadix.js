@@ -1,9 +1,15 @@
 export default {
-  util({ log }, [num, radix = '82']) {
-    const bn = new BigNumber(num.toLowerCase(), 16);
+  util({ log }, [num, fromRadix, toRadix = '82']) {
+    if (num === undefined) {
+      return log({
+        text: 'hex num:{color: #eee | string} fromRadix:{color: #eee | number} toRadix:{color: #eee | number}',
+      });
+    }
+
+    const bn = new BigNumber(num.toLowerCase(), +fromRadix);
 
     log({
-      text: bn.toString(+radix),
+      text: bn.toString(+toRadix),
     });
   },
 };
