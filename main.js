@@ -33,8 +33,6 @@ const main = () => {
     }
   );
 
-  term.exec('p  --http');
-
   term.config.input.showInput = true;
 };
 
