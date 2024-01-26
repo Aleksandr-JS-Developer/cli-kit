@@ -1,6 +1,6 @@
 import PurifyHTML from 'https://cdn.jsdelivr.net/npm/purify-html/+esm';
 
-const sanitizer = new PurifyHTML.default();
+const sanitizer = new PurifyHTML.sanitizer();
 
 export default {
   util({ log, flags }, [host]) {
